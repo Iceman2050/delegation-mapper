@@ -1,0 +1,70 @@
+# Sample delegation inventory for delegation-mapper.
+# All delegates below are fictional. Keep reviews fresh: anything not
+# re-reviewed within 180 days gets flagged as stale.
+#
+# Fields per delegate:
+#   name:              who holds the delegated authority
+#   authority:         what they are allowed to do in your name
+#   scopes:            systems / courts / mailboxes the authority covers
+#   domains:           their public domains to posture-check
+#   contact:           security contact on file
+#   last_review_date:  ISO date of the last delegation review (YYYY-MM-DD)
+
+delegates:
+  - name: "Meridian Filing Services"
+    authority: "files bankruptcy notices on our behalf"
+    scopes:
+      - "US bankruptcy courts"
+      - "notices.ourcompany.internal"
+    domains:
+      - "meridian-filings.example"
+    contact: "security@meridian-filings.example"
+    last_review_date: "2026-09-20"
+
+  - name: "Northbridge Mail Relay"
+    authority: "sends email as @ourcompany"
+    scopes:
+      - "marketing.ourcompany"
+      - "support.ourcompany"
+    domains:
+      - "mail.northbridge-relay.example"
+    contact: "postmaster@northbridge-relay.example"
+    last_review_date: "2025-11-02"
+
+  - name: "Halcyon Data Processors"
+    authority: "transmits customer records to the fulfillment warehouse"
+    scopes:
+      - "sftp.data.ourcompany"
+    domains:
+      - "halcyon-dp.example"
+    contact: "infosec@halcyon-dp.example"
+    last_review_date: "2026-08-01"
+
+  - name: "Cobalt PR Collective"
+    authority: "speaks as our company to trade press"
+    scopes:
+      - "press inbox"
+      - "social accounts (read-only)"
+    domains:
+      - "cobalt-pr.example"
+    contact: "desk@cobalt-pr.example"
+    last_review_date: "2024-12-15"
+
+  - name: "Vantage Legal Couriers"
+    authority: "serves legal documents on our behalf"
+    scopes:
+      - "state courts"
+    domains:
+      - "vantage-legal.example"
+      - "portal.vantage-legal.example"
+    contact: "ops@vantage-legal.example"
+    last_review_date: "2026-06-10"
+
+  - name: "Defunct Analytics Co"
+    authority: "had read access to the product analytics warehouse"
+    scopes:
+      - "warehouse.ourcompany (revoked 2026-02)"
+    domains:
+      - "defunct-analytics.example"
+    contact: "nobody@defunct-analytics.example"
+    last_review_date: "2025-01-05"

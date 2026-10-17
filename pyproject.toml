@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "delegation-mapper"
+version = "1.0.0"
+description = "Map delegated authorities and watch delegates' public security posture (stdlib only)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+delegation-mapper = "delegation_mapper:main"
+
+[tool.setuptools]
+py-modules = ["delegation_mapper"]
